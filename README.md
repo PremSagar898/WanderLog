@@ -80,6 +80,6 @@ If no key is set, the app uses the built-in demo auth fallback.
 
 ## Deployment Notes
 
-- Live app: https://wander-log-sigma.vercel.app/auth
+- Live app: (https://wander-log-weld.vercel.app/auth)
 - Country and detail pages use live REST Countries data.
 - All bucket list changes are stored per user in `localStorage`.
