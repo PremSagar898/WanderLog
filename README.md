@@ -1,16 +1,54 @@
 # WanderLog
 
-WanderLog is a small travel bucket list app built with React and Vite. It lets users sign in, browse real country data, and keep track of places they want to visit or have already visited.
+WanderLog is a clean travel bucket list app built with React and Vite. Users can sign in, explore live country data, and save places they want to visit or have already visited.
 
-## What’s inside
+## Live Site
 
-- Login flow with a Reqres-based auth demo.
-- Protected routes with session persistence.
-- Country search, filtering, and detail views.
-- Personal bucket lists for Want to Visit and Visited.
-- Local storage so each user keeps their own progress.
+- https://wander-log-sigma.vercel.app/auth
 
-## Tech stack
+## Project Overview
+
+- Sign in with a Reqres-based demo auth flow.
+- Browse live country data from the REST Countries API.
+- Search, filter, and open country detail pages.
+- Manage personal Want to Visit and Visited lists.
+- Keep progress per user with `localStorage`.
+
+## Workflow
+
+1. Open the auth page and sign in.
+2. Load countries from the REST Countries API.
+3. Search or filter the explore page.
+4. Open a country detail page.
+5. Add countries to Want to Visit or Visited.
+6. Save each user’s progress locally.
+
+## Folder Structure
+
+```text
+wanderlog/
+├── public/
+│   ├── favicon.svg
+│   ├── icons.svg
+│   └── ...
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── context/
+│   ├── pages/
+│   ├── services/
+│   ├── utils/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── main.jsx
+│   └── index.css
+├── index.html
+├── package.json
+├── vite.config.js
+└── eslint.config.js
+```
+
+## Tech Stack
 
 - React
 - Vite
@@ -18,7 +56,7 @@ WanderLog is a small travel bucket list app built with React and Vite. It lets u
 - REST Countries API
 - Reqres API
 
-## Run locally
+## Run Locally
 
 ```bash
 npm install
@@ -33,15 +71,15 @@ If you have a Reqres API key, add it to `.env`:
 VITE_REQRES_API_KEY=your_key_here
 ```
 
-The app also works without the key by using the local demo auth fallback.
+If no key is set, the app uses the built-in demo auth fallback.
 
-## Demo credentials
+## Demo Credentials
 
 - Email: `eve.holt@reqres.in`
 - Password: `cityslicka`
 
-## Notes
+## Deployment Notes
 
-- The country list and detail pages use live REST Countries data.
-- Bucket list items are saved per user in `localStorage`.
-- The current UI is tuned to stay simple, readable, and close to the provided reference.
+- Live app: https://wander-log-sigma.vercel.app/auth
+- Country and detail pages use live REST Countries data.
+- All bucket list changes are stored per user in `localStorage`.
